@@ -1,15 +1,15 @@
-import React from 'react'
-import './css/News.css'
+// News.jsx
+import React from 'react';
+import './css/News.css';
+import Cover from './sub/Cover';
 
-function News() {
+function News({ children }) {
   return (
-    <>
-      <section className="cover">
-        <div className="cover-content">
-          <h1>News Page</h1>
-          <p>This is a description or some welcome text.</p>
+    <Cover>
 
-          <div className="card" style={{ width: '18rem' }}>
+      {children}
+      <h1>News here</h1>
+      <div className="card" style={{ width: '18rem' }}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTQRBv6KfH1kRkeFG9h6Co45CKH88aUXFm1KwVScdOpLlrqvN7He-u4xrwuLbvUAvsi6U&usqp=CAU" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
@@ -21,13 +21,8 @@ function News() {
             </div>
           </div>
 
-
-
-        </div>
-      </section>
-    
-    </>
-  )
+    </Cover>
+  );
 }
 
-export default News
+export default News;
