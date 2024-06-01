@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/User.css';
 import Cover from './sub/Cover';
+import React, { useEffect, useState } from 'react';
 
 const userData = [
   { id: 1, accountNo: 1, name: 'Mark', address: 'Otto' },
@@ -10,6 +11,11 @@ const userData = [
 ];
 
 function User({ children }) {
+  const [area, setArea] = useState("");
+  const [account, setAccount] = useState("");
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState("");
+  
   return (
     <Cover name="User">
       {children}
