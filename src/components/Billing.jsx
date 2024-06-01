@@ -1,11 +1,14 @@
 import React from 'react'
+import Cover from './sub/Cover';
 
-function Billing() {
+function Billing({ children }) {
   return (
     <>
-      <section className="cover">
-      <div className="cover-content">
-        <h1>Bulling Calculate Page</h1>
+      <Cover name="News">
+
+      {children}
+
+      <h1>Bulling Calculate Page</h1>
         <p>This is a description or some welcome text.</p>
 
         <div class="mb-3">
@@ -50,8 +53,7 @@ function Billing() {
   </tbody>
 </table>
 
-      </div>
-    </section>
+      </Cover>
     </>
   )
 }

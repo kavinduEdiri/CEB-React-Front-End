@@ -1,14 +1,14 @@
 import React from 'react'
+import Cover from './sub/Cover';
 
-function Units() {
+function Units({ children }) {
   return (
     <>
-      <section className="cover">
-      <div className="cover-content">
-        <h1>Units Details Page</h1>
-        <p>This is a description or some welcome text.</p>
+      <Cover name="Units">
 
-        <table class="table table-striped">
+      {children}
+
+      <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">Tariff Block</th>
@@ -38,9 +38,8 @@ function Units() {
             </tr>
           </tbody>
         </table>
-      </div>
-    </section>
-    
+
+      </Cover>
     </>
   )
 }
